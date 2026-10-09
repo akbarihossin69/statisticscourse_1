@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره جامع آمار استنباطی - استایل نوا</title>
+    <!-- MathJax for beautiful formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #6e8efb;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h2 { font-size: 1.2rem; color: #444; }
+        .card .icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+
+        .content-section {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6e8efb;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover { background-color: #5a7be2; }
+
+        .highlight-box {
+            background-color: #eef2ff;
+            border-right: 5px solid #6e8efb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border-right: 5px solid #fc8181;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .method-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .method-item strong { color: #6e8efb; }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header id="main-header">
+            <h1>📊 دوره جامع آمار استنباطی</h1>
+            <p>یادگیری ساده، سریع و مفهومی به استایل نوا 🚀</p>
+        </header>
+
+        <div id="menu" class="menu-grid">
+            <div class="card" onclick="showSection('sec1')">
+                <span class="icon">📦</span>
+                <h2>ماژول ۱</h2>
+                <p>مبانی و هنر نمونه‌گیری</p>
+            </div>
+            <div class="card" onclick="showSection('sec2')">
+                <span class="icon">🎯</span>
+                <h2>ماژول ۲</h2>
+                <p>برآورد و محاسبات</p>
+            </div>
+            <div class="card" onclick="showSection('sec3')">
+                <span class="icon">🔍</span>
+                <h2>ماژول ۳</h2>
+                <p>گردآوری داده‌ها و جمع‌بندی</p>
+            </div>
+        </div>
+
+        <!-- Module 1 -->
+        <div id="sec1" class="content-section">
+            <h1>📊 آمار استنباطی (بخش اول)</h1>
+            <h3>مبانی و هنر نمونه‌گیری</h3>
+            
+            <div class="highlight-box">
+                <strong>💡 ایده اصلی: چرا نمونه بگیریم؟</strong><br>
+                فکر کن می‌خوای بدونی یه دیگ بزرگ آش نمکشه یا نه. فقط یک قاشق ازش رو برمی‌داری و می‌چشی. 
+                تو با خوردن یک قاشق (نمونه)، درباره کل دیگ (جامعه) تصمیم گرفتی.
+            </div>
+
+            <h4>📦 واژگان کلیدی</h4>
+            <ul>
+                <li><strong>واحد آماری 👤:</strong> هر یک قاشق آش.</li>
+                <li><strong>جامعه آماری 🌍:</strong> کل دیگ آش.</li>
+                <li><strong>نمونه 🤏:</strong> بخش کوچیکی که جدا می‌کنیم.</li>
+                <li><strong>سرشماری 📋:</strong> بررسی تک تک اعضا.</li>
+            </ul>
+
+            <h4>🛠️ روش‌های نمونه‌گیری (چطور انتخاب کنیم؟)</h4>
+            <div class="method-item">
+                <strong>🎲 تصادفی ساده:</strong> هر عضوی از جامعه شانس یکسانی برای انتخاب شدن دارد (مثل قرعه‌کشی).
+            </div>
+            <div class="method-item">
+                <strong>📏 سیستماتیک:</strong> انتخاب با یک فاصله ثابت؛ مثلاً هر ۱۰امین نفر. (در این روش هم شانس انتخاب اعضا یکسان است).
+            </div>
+            <div class="method-item">
+                <strong>🏘️ خوشه‌ای:</strong> جامعه به گروه‌های طبیعی (خوشه) تقسیم شده و چند خوشه به طور کامل انتخاب می‌شوند. (در این روش هم شانس انتخاب اعضا یکسان است).
+            </div>
+            <div class="method-item">
+                <strong>🍰 طبقه‌ای:</strong> جامعه به گروه‌های همگن (طبقه) تقسیم شده و از هر گروه تعدادی انتخاب می‌شود. <br>
+                <small>⚠️ نکته: در این روش ممکن است شانس انتخاب اعضا با هم برابر نباشد تا هر طبقه به اندازه اهمیتش در نمونه باشد.</small>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ تلهٔ اریبی (Bias)</strong><br>
+                مثلاً اگه فقط از آدم‌های پولدار بپرسی مردم شهر چقدر درآمد دارن، نتیجه "اریب" و غلط می‌شه!<br>
+                <strong>💡 نکته طلایی:</strong> مشکل اریبی با زیاد کردن تعداد نمونه حل نمی‌شه، بلکه با "روش درست" حل می‌شه.
+            </div>
+
+            <div class="back-btn" onclick="showMenu()">⬅️ بازگشت به منو</div>
+        </div>
+
+        <!-- Module 2 -->
+        <div id="sec2" class="content-section">
+            <h1>🎯 آمار استنباطی (بخش دوم)</h1>
+            <h3>برآورد و محاسبات</h3>
+
+            <h4>📉 انحراف معیار میانگین (خطا)</h4>
+            <p>فرمول محاسبه خطا:</p>
+            <div class="highlight-box" style="text-align: center; font-size: 1.3rem;">
+                $$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$$
+            </div>
+            <p>(خطا برابر است با انحراف معیار جامعه تقسیم بر جذر تعداد نمونه)</p>
+            <ul>
+                <li>$\sigma$ بالا $\rightarrow$ خطا بیشتر 📈</li>
+                <li>$n$ بالا $\rightarrow$ خطا کمتر 📉</li>
+            </ul>
+            <p><strong>💡 کلید امتحان:</strong> برای کم کردن خطا، تعداد نمونه ($n$) را زیاد کن!</p>
+
+            <h4>📏 بازه اطمینان ۹۵٪</h4>
+            <p>به جای یک عدد تک، یک «محدوده امن» اعلام می‌کنیم تا احتمال درست بودن حرفمون بالا بره:</p>
+            <div class="highlight-box" style="text-align: center; font-size: 1.2rem;">
+                $$\bar{x} - \frac{2\sigma}{\sqrt{n}} \leq \mu \leq \bar{x} + \frac{2\sigma}{\sqrt{n}}$$
+            </div>
+            <p>این فرمول به ما می‌گوید که میانگین واقعی جامعه ($\mu$) به احتمال ۹۵٪ در این بازه قرار دارد.</p>
+
+            <div class="back-btn" onclick="showMenu()">⬅️ بازگشت به منو</div>
+        </div>
+
+        <!-- Module 3 -->
+        <div id="sec3" class="content-section">
+            <h1>🔍 آمار استنباطی (بخش سوم)</h1>
+            <h3>گردآوری داده‌ها و جمع‌بندی</h3>
+
+            <h4>🛠️ جعبه ابزار پژوهشگر</h4>
+            <div class="method-item"><strong>👁️ مشاهده:</strong> ✅ واقعی‌ترین رفتار | ❌ وقت‌گیر</div>
+            <div class="method-item"><strong>📝 پرسشنامه:</strong> ✅ سریع و ارزان | ❌ احتمال جواب غلط</div>
+            <div class="method-item"><strong>🎙️ مصاحبه:</strong> ✅ جزئیات دقیق | ❌ تحلیل سخت</div>
+            <div class="method-item"><strong>📚 دادگان:</strong> ✅ سریع (آماده) | ❌ احتمال قدیمی بودن</div>
+
+            <h4>🎓 پارامتر vs آماره</h4>
+            <div class="highlight-box">
+                <strong>پارامتر 🌍:</strong> عددی که ویژگی «کل جامعه» را نشان می‌دهد.<br>
+                <strong>آماره 🤏:</strong> عددی که ویژگی «نمونه» را نشان می‌دهد.
+            </div>
+            <p style="text-align: center; font-weight: bold;">💡 ما "آماره" رو حساب می‌کنیم تا "پارامتر" رو حدس بزنیم.</p>
+
+            <div class="back-btn" onclick="showMenu()">⬅️ بازگشت به منو</div>
+        </div>
+
+        <div class="footer-note">
+            طراحی شده برای یادگیری مفهومی — استایل نوا 🚀
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('main-header').style.display = 'none';
+            
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            document.getElementById(id).classList.add('active');
+        }
+
+        function showMenu() {
+            document.getElementById('menu').style.display = 'grid';
+            document.getElementById('main-header').style.display = 'block';
+            
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+        }
+    </script>
+</body>
+</html>
